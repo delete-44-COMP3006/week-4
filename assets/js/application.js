@@ -1,10 +1,20 @@
 $(window).on('load', () => {
+  syncText()
+
   $('#module-form').submit((e) => {
-    let name = $('#module-name').val()
-    let code = $('#module-code').val()
+    localStorage.code = $('#module-code').val()
+    localStorage.name = $('#module-name').val()
 
-    $('#module-info').html(`${code} - ${name}`)
-
-    e.preventDefault();
+    syncText();
   });
 });
+
+function syncText() {
+  let text = 'No module saved. Fill in the information below'
+
+  if (localStorage.code !== undefined && localStorage.name !== undefined) {
+    text = `${localStorage.code} - ${localStorage.name}`
+  }
+
+  $('#module-info').html(text)
+}
