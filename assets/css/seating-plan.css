@@ -1,0 +1,24 @@
+#room {
+  background-color: #cfcfcf;
+  border: 1px solid black;
+  width: 360px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.seat {
+  width: 100px;
+  min-height: 100px;
+  margin: 10px;
+  float: left;
+  background-color: #00cc00;
+  transition: background-color .15s ease-in;
+}
+
+.seat:hover {
+  background-color: #028302;
+}
+
+.booked {
+  background-color: #cc0000;
+}
