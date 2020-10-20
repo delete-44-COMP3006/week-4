@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="assets/js/bubble-sort.js"></script>
+
+    <style>
+      body {
+        background-color: #00b3c0;
+        color: white;
+        line-height: 1.6;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .label {
+        font-style: italic;
+        color: #cecece;
+        margin-top: 3rem;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <label for="numberOfValues">Please enter the number of values to generate & sort</label>
+    <input type="number" id="numberOfValues" min="0"/>
+
+    <span>
+      <button id="generate">Generate & Sort</button>
+      <button id="currentDate">Display the time</button>
+    </span>
+
+    <p class="label">Current time:</p>
+    <p id="currentTime"></p>
+
+    <p class="label">Generating numbers:</p>
+    <p id="beforeGeneration"></p>
+
+    <p class="label">Numbers generated:</p>
+    <p id="afterGeneration"></p>
+
+    <p class="label">Numbers sorted:</p>
+    <p id="numbersSorted"></p>
+
+    <p id="results"></p>
+  </body>
+</html>
