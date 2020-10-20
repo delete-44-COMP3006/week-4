@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="assets/js/helloWorker.js"></script>
+
+    <script>
+      $(function() {
+        // Define the worker and point at the helloWorker.js file.
+        let worker = new Worker("assets/js/helloWorker.js");
+
+        // Process the response message sent by the worker.
+        worker.addEventListener("message", function(evt) {
+          // Extract the data from the event - this is the message,
+          // put it into the page using jQuery.
+          let msg = evt.data;
+          $("#messagePar").append(msg);
+        });
+
+        // Invoke the worker.
+        worker.postMessage("David");});
+    </script>
+  </head>
+
+  <body>
+    <p id="messagePar">Results:</p>
+  </body>
+</html>
