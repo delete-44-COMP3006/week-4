@@ -22,3 +22,7 @@
 .booked {
   background-color: #cc0000;
 }
+
+.booked:hover {
+  background-color: #830000;
+}
